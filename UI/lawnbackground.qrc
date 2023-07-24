@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Bbox_pose_Pipeline/Full_pipeline_software_Zejian/Behavioural_lab.png</file>
+    <file>Bbox_pose_Pipeline/Full_pipeline_software_Zejian/question_mark5.ico</file>
+    <file>lawnbackground.jpeg</file>
+  </qresource>
+</RCC>
