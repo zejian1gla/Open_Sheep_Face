@@ -32,7 +32,7 @@ and care of sheep populations.
 
 # Citation
 When utilizing any of the resources made available on this page in your publications, 
-we kindly request you to provide citations for the work that you utilized.
+cite the following publications:
 
 **Open-Sheep-Face: A Comprehensive Application for Sheep Face Analysis and Pain Estimation** - Zejian Feng, Martina Karaskova, and Marwa Mahmoud,
 ACII 2023 
