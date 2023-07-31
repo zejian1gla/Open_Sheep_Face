@@ -77,7 +77,7 @@ def main(image_name, frameflag, image_with_box, img=None):
     model = hopenet.Hopenet(torchvision.models.resnet.Bottleneck,[3, 4, 6, 3], 66)
     # print('Loading snapshot.')
     # Load snapshot
-    saved_state_dict = torch.load(snapshot_path)
+    saved_state_dict = torch.load(snapshot_path,map_location= torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
     model.load_state_dict(saved_state_dict)
     # print('Loading data.')
     transformations = transforms.Compose([transforms.Resize(224),
