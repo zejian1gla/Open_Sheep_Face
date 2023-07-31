@@ -1,2 +1,0 @@
-face_num, yaw_predicted, pitch_predicted, roll_predicted, x_min, y_min, x_max, y_max, confidence, pain_status
-1 8.093414 -9.761093 -3.200531 209.000000 97.000000 492.000000 340.000000 0.902344 1.000000
