@@ -5,12 +5,9 @@ import random
 import torch
 import numpy as np
 import os
-import io
 import torch.backends.cudnn as cudnn
 import test_on_image_or_firstframe
-import matplotlib.pyplot as plt
 from PyQt5.QtWidgets import *
-from utils.torch_utils import select_device
 from models.experimental import attempt_load
 from utils.general import check_img_size, non_max_suppression, scale_coords
 from utils.datasets import letterbox

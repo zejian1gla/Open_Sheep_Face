@@ -1,29 +1,19 @@
-import sys, os
-import numpy
+import os
 import cv2
-import matplotlib.pyplot as plt
 import torch
 import glob
-import torch.nn as nn
 from torch.autograd import Variable
-from torch.utils.data import DataLoader
 from torchvision import transforms
 import torch.backends.cudnn as cudnn
 import torchvision
 import torch.nn.functional as F
 from PIL import Image
-import time
 import joblib
 import numpy as np
-import hopenet_utils
 import hopenet
 import math
 from app import landmark_prediction
-# from latest_ui import Ui_MainWindow, Ui_Dialog
-# import datasets, hopenet, utils
-import argparse
 from skimage.feature import hog
-from skimage import io
 
 import argparse
 from run_interface import large_page_with_result

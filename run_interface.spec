@@ -5,13 +5,25 @@ sys.setrecursionlimit(5000)
 
 block_cipher = None
 
-SETUP_DIR = r'C:\Users\zejian\zejian_PhD_project\packaged_pipeline'
+SETUP_DIR = r'C:\\Users\\zejian\\zejian_PhD_project\\packaged_pipeline\\'
 
 a = Analysis(
     ['run_interface.py','test_on_image_or_firstframe.py'],
     pathex=[r'C:\Users\zejian\zejian_PhD_project\packaged_pipeline'],
-    binaries=[],
-    datas=[(SETUP_DIR+'0-30.hkl','0-30.hkl'),(SETUP_DIR+'30-60.hkl','60-90.hkl'),(SETUP_DIR+'60-90.hkl','60-90.hkl'),
+    binaries=[(r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\scipy\.libs",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\util",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\client",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\platform",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\framework",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\profiler\internal",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\lib\io",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\saved_model",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\util",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\lib\core",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\data\experimental\service",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\tensorflow\python\grappler",'.'),
+    (r"C:\Users\zejian\Sheep_demo\Bbox_pose_Pipeline\packaged_pipeline\venv\Lib\site-packages\menpo",'.')],
+    datas=[(SETUP_DIR+'0-30.hkl','0-30.hkl'),(SETUP_DIR+'30-60.hkl','30-60.hkl'),(SETUP_DIR+'60-90.hkl','60-90.hkl'),
     (SETUP_DIR+'cascade_forest_training.log','cascade_forest_training.log'),(SETUP_DIR+'svm_models.pkl','svm_models.pkl'),
     (SETUP_DIR+'hopenet_weights/best_epoch_1.pk1','hopenet_weights/best_epoch_1.pk1'),(SETUP_DIR+'hopenet_weights/g_epoch_1.pk1','hopenet_weights/g_epoch_1.pk1'),
     (SETUP_DIR+'hopenet_weights/g_epoch_2.pk1','hopenet_weights/g_epoch_2.pk1'),(SETUP_DIR+'hopenet_weights/gg_epoch_2.pk1','hopenet_weights/gg_epoch_2.pk1'),
@@ -19,8 +31,8 @@ a = Analysis(
     (SETUP_DIR+'UI/lawnbackground.qrc','UI/lawnbackground.qrc'),(SETUP_DIR+'UI/Be_AI_logo.png','UI/Be_AI_logo.png'),
     (SETUP_DIR+'yolo_weights/1_2022_08_12best.pt','yolo_weights/1_2022_08_12best.pt'),(SETUP_DIR+'app/0-30.hkl','app/0-30.hkl'),
     (SETUP_DIR+'question_mark5.ico','question_mark5.ico')],
-    hiddenimports=['pandas','pandas._libs','pandas._libs.tslibs.np_datetime','pandas._libs.tslibs.timedeltas',
-             'pandas._libs.tslibs.nattype', 'pandas._libs.skiplist','scipy._lib','scipy._lib.messagestream'],
+    hiddenimports=['pandas',"pytest",'pandas._libs','pandas._libs.tslibs.np_datetime','pandas._libs.tslibs.timedeltas',"sklearn.neighbors._typedefs","importlib_resources.trees"
+             'pandas._libs.tslibs.nattype','scipy._lib','scipy._lib.messagestream','menpo','tensorflow','tensorflowjs','PyQt5','torch'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
