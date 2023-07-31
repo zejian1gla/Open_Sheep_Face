@@ -61,6 +61,7 @@ def main(image_name, frameflag, image_with_box, img=None):
     cudnn.enabled = True
     batch_size= 1
     gpu = 0
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     snapshot_path = args.snapshot
     out_dir = args.out_dir
     image_path = args.image_path
@@ -82,14 +83,17 @@ def main(image_name, frameflag, image_with_box, img=None):
     transformations = transforms.Compose([transforms.Resize(224),
                                           transforms.CenterCrop(224),transforms.ToTensor(),
                                           transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])])
-    model.cuda(gpu)
+    model.to(device)
+    # model.cuda(gpu)
     print(f'pose_estimation_gpu:{torch.cuda.is_available()}')
     # print('Ready to test network.')
     # Test the model
     model.eval() # Change model to 'eval' mode (BN uses moving mean/var).
     total = 0
     idx_tensor = [idx for idx in range(66)]
-    idx_tensor = torch.FloatTensor(idx_tensor).cuda(gpu)
+    idx_tensor = torch.FloatTensor(idx_tensor)
+    idx_tensor = idx_tensor.to(device)
+    # idx_tensor = torch.FloatTensor(idx_tensor).cuda(gpu)
     # set your output filefolder path
     if frameflag == 0:
         # txt_out = open(f'{out_dir}/{image_path.split("/")[-1]}bbox_pose.txt', "w")
@@ -147,11 +151,16 @@ def main(image_name, frameflag, image_with_box, img=None):
                 img= transformations(img)
                 img_shape = img.size()
                 img = img.view(1, img_shape[0], img_shape[1], img_shape[2])
-                img = Variable(img).cuda(gpu)
+                img = Variable(img)
+                img = img.to(device)
+                # img = Variable(img).cuda(gpu)
                 yaw, pitch, roll = model(img)
                 yaw_predicted = F.softmax(yaw)
                 pitch_predicted = F.softmax(pitch)
                 roll_predicted = F.softmax(roll)
+                # yaw_predicted=yaw_predicted.to(device)
+                # pitch_predicted=pitch_predicted.to(device)
+                # roll_predicted=roll_predicted.to(device)
                 yaw_predicted = torch.sum(yaw_predicted.data[0] * idx_tensor) * 3 - 99
                 pitch_predicted = torch.sum(pitch_predicted.data[0] * idx_tensor) * 3 - 99
                 roll_predicted = torch.sum(roll_predicted.data[0] * idx_tensor) * 3 - 99

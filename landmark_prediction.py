@@ -23,7 +23,8 @@ def evaluate_landmarks(image, yaw, box):
     init_shapes, fin_shapes = model.apply(ibug_exam, [ibug_exam_boxes[0]])
 
     landmarks = fin_shapes[0].points
+    landmarks = [[round(x, 4), round(y, 4)] for x, y in landmarks]
     # rotate the landmarks back
     if rotated:
-        landmarks = [[x, y] for x, y in landmarks]
+        landmarks = [[round(x,4), round(y,4)] for x, y in landmarks]
     return landmarks

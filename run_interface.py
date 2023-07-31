@@ -85,8 +85,9 @@ class interface(QtWidgets.QMainWindow):
                             help='existing project/name ok, do not increment')
         self.opt = parser.parse_args()
         source, weights, view_img, save_txt, imgsz = self.opt.source, self.opt.weights, self.opt.view_img, self.opt.save_txt, self.opt.img_size
-
-        self.device = select_device(self.opt.device)
+        self.opt.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        # self.device = select_device(self.opt.device)
+        self.device = self.opt.device
         self.half = self.device.type != 'cpu'
         cudnn.benchmark = True
         # Load model
@@ -471,19 +472,6 @@ class help(QtWidgets.QMainWindow):
             with face detection, pose estimation, landmarks
             predictions and pain estimation, jointly designed by
             Marwa Mahmoud, Zejian Feng and Martina Karaskova.
-            
-                The Open Sheep Face application is a comprehensive
-            pipeline that automates the process of detecting sheep
-            faces, analyzing sheep head pose, predicting landmarks,
-            and providing pain estimation results with visual displays.
-            Users can conveniently obtain pain estimation results by
-            simply uploading an image or video from their local device.
-            
-                The application then automatically analyzes the input
-            and generates results that include landmarks and bounding
-            boxes drawn around the detected sheep faces, all of which
-            are displayed within the application interface and saved
-            with csv files.
               '''
         self.label.setText(intro)
         font = QtGui.QFont()
