@@ -38,6 +38,7 @@ class interface(QtWidgets.QMainWindow):
         self.window1 = No_face_detected()
         self.box_empty_status = 1
         self.window_status = 0
+        self.create_output_folders()
         # self.init_result = cv2.imread('11_University-of-Glasgow-1.jpeg')
         # self.init_results = "Statistical information:"
         # self.dio = Ui_Dialog(self.init_result, self.init_results, None)
@@ -102,6 +103,13 @@ class interface(QtWidgets.QMainWindow):
         # set the boundingbox colors
         self.colors = [[random.randint(0, 255)
                         for _ in range(3)] for _ in self.names]
+    def create_output_folders(self):
+        if not os.path.exists('output_img/output_image'):
+            os.makedirs('output_img/output_image')
+        if not os.path.exists('output_img/output_img_bbox'):
+            os.makedirs('output_img/output_img_bbox')
+        if not os.path.exists('output_img/output_img_bbox_pose'):
+            os.makedirs('output_img/output_img_bbox_pose')
     def open_help(self):
         self.help_page.show()
     def open_large_interface(self,dio_window_list):
