@@ -18,10 +18,8 @@ pandas==1.5.3
 Pillow==9.5.0
 protobuf==3.20.3
 psutil==5.9.0
-pycocotools==2.0.6
 PyQt5==5.15.9
 PyQt5_sip==12.11.0
-PyYAML==6.0
 PyYAML==6.0
 Requests==2.31.0
 scikit_image==0.19.3
