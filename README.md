@@ -12,7 +12,7 @@ enhance them by integrating them into an application that serves
 as a diagnostic tool for ensuring optimal welfare for sheep.
 
 # Setup
-For instructions on how to use the application, please see (fill later).
+For instructions on how to use the application, please see [Readme.txt](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/Readme.txt).
 
 # Functionality
 The Open Sheep Face application is an all-encompassing pipeline designed to streamline the process of sheep face detection, head pose analysis, 
@@ -29,6 +29,9 @@ such as the probability of face detection and a pain estimation number result in
 Overall, the Open Sheep Face application stands out as an indispensable tool for researchers, veterinarians, and animal enthusiasts alike. 
 With its user-friendly interface, swift analysis, and comprehensive output, this application is a valuable asset in promoting the welfare 
 and care of sheep populations.
+
+# Contact
+If you have any issues about this application, feel free to reach out by email: zejianfeng474@gmail.com
 
 # Citation
 When utilizing any of the resources made available on this page in your publications, 
