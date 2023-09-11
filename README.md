@@ -30,6 +30,10 @@ Overall, the Open Sheep Face application stands out as an indispensable tool for
 With its user-friendly interface, swift analysis, and comprehensive output, this application is a valuable asset in promoting the welfare 
 and care of sheep populations.
 
+# Examples of sheep pain analysis
+![Sample1](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/nopain_whitebg.png)
+
+![Sample2](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/nopain_results.png)
 # Contact
 If you have any issues about this application, feel free to reach out by email: zejianfeng474@gmail.com
 
