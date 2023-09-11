@@ -31,7 +31,11 @@ With its user-friendly interface, swift analysis, and comprehensive output, this
 and care of sheep populations.
 
 # Examples of sheep pain analysis
+* **Automatic face detection, pose-informed landmark localization**
+
 ![Sample1](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/nopain_whitebg.png)
+
+* **Results of pain analysis**
 
 ![Sample2](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/nopain_results.png)
 # Contact
