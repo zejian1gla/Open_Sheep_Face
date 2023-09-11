@@ -124,7 +124,7 @@ class interface(QtWidgets.QMainWindow):
             print("OK!")
     def init_logo(self):
         self.logo.setMaximumSize(300, 40)
-        pix=QtGui.QPixmap("UI/Be_AI_logo")
+        pix=QtGui.QPixmap("UI/BHAI_logo")
         self.logo.setScaledContents(True)
         pix = pix.scaled(280, 40, QtCore.Qt.KeepAspectRatio)
         self.logo.setPixmap(pix)
@@ -508,7 +508,7 @@ class help(QtWidgets.QMainWindow):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "TextLabel"))
+        self.label.setText(_translate("About", "TextLabel"))
 # large_page_with_result
 class large_page_with_result(QtWidgets.QMainWindow):
     def __init__(self,image, info, boundingbox,dio_window_list, parent = None):
@@ -608,7 +608,7 @@ class large_page_with_result(QtWidgets.QMainWindow):
 
     def init_logo(self):
         self.logo.setMaximumSize(300, 40)
-        pix=QtGui.QPixmap("UI/Be_AI_logo")
+        pix=QtGui.QPixmap("UI/BHAI_logo")
         self.logo.setScaledContents(True)
         pix = pix.scaled(280, 40, QtCore.Qt.KeepAspectRatio)
         self.logo.setPixmap(pix)

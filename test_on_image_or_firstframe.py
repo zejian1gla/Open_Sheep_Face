@@ -124,8 +124,8 @@ def main(image_name, frameflag, image_with_box, img=None):
             x_min, y_min, x_max, y_max, conf = float(line[0]), float(line[1]), float(line[2]), float(line[3]), float(line[4])
             # print(x_min, y_min, x_max, y_max, conf)
             if conf >= 0.5:
-                bbox_wid = abs(x_max - x_min)
-                bbox_height = abs(y_max - y_min)
+                # bbox_wid = abs(x_max - x_min)
+                # bbox_height = abs(y_max - y_min)
                 # x_min -= 2 * bbox_wid / 4
                 # x_max += 2 * bbox_wid / 4
                 # y_min -= 3 * bbox_height / 4
@@ -323,7 +323,7 @@ def show_img(image, data):
         print(point)
         p1 = int(point[0])
         p2 = int(point[1])
-        image=cv2.circle(image, tuple([p1,p2]),1,(0,0,255))
+        image=cv2.circle(image, tuple([p1,p2]),2,(0,0,255),-1)
     return image
     # if 0.5 <= avg:
     #     pain_result = ctk.CTkLabel(root, text="The Sheep is in pain", font=ctk.CTkFont(size=25))

@@ -12,13 +12,13 @@ def evaluate_landmarks(image, yaw, box):
     if yaw < 0:
         yaw_angle *= -1
     if yaw_angle <= 30:
-        model = hickle.load("0-30.hkl")
+        model = hickle.load("1_final_30_pi_ert_model.hkl")
         print("0-30")
     elif 30 < yaw_angle <= 60:
-        model = hickle.load("30-60.hkl")
+        model = hickle.load("1_final_60_pi_ert_model.hkl")
         print("30-60")
     else:
-        model = hickle.load("60-90.hkl")
+        model = hickle.load("1_final_90_pi_ert_model.hkl")
         print("60-90")
     init_shapes, fin_shapes = model.apply(ibug_exam, [ibug_exam_boxes[0]])
 
