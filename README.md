@@ -38,6 +38,10 @@ and care of sheep populations.
 * **Results of pain analysis**
 
 ![Sample2](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/nopain_results.png)
+
+* **Results saved as csv**
+
+![Sample3](https://github.com/zejian1gla/Open_Sheep_Face/blob/master/examples/csv_result.png)
 # Contact
 If you have any issues about this application, feel free to reach out by email: zejianfeng474@gmail.com
 
