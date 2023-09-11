@@ -12,7 +12,7 @@ def evaluate_landmarks(image, yaw, box):
     if yaw < 0:
         yaw_angle *= -1
     if yaw_angle <= 30:
-        model = hickle.load("1_final_30_pi_ert_model.hkl")
+        model = hickle.load("6_final_30_pi_ert_model.hkl")
         print("0-30")
     elif 30 < yaw_angle <= 60:
         model = hickle.load("1_final_60_pi_ert_model.hkl")

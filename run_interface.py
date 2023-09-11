@@ -529,8 +529,8 @@ class large_page_with_result(QtWidgets.QMainWindow):
                 self.result = cv2.cvtColor(image, cv2.COLOR_BGR2BGRA)
                 self.result_crop = self.result[int(boundingbox[1]):int(boundingbox[3]), int(boundingbox[0]):int(boundingbox[2])]
                 # print(f'{int(boundingbox[1])},{int(boundingbox[3])},{int(boundingbox[0])},{int(boundingbox[2])}')
-                show = cv2.resize(self.result, (640, 480), interpolation=cv2.INTER_AREA)
-                self.result = show
+                # show = cv2.resize(self.result, (640, 480), interpolation=cv2.INTER_AREA)
+                # self.result = show
             else:
                 self.result = image
                 show = cv2.resize(self.result, (640, 480), interpolation=cv2.INTER_AREA)
